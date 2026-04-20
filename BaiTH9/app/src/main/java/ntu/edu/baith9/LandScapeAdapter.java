@@ -50,7 +50,7 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
         return lstData.size();
     }
 
-    class ItemLandHolder extends RecyclerView.ViewHolder {
+    class ItemLandHolder extends RecyclerView.ViewHolder  {
         TextView tvCaption;
         ImageView ivLandscape;
 
