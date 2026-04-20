@@ -12,7 +12,7 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="16dp"
         android:text="One"
         app:cornerRadius="12dp"
         app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -33,6 +33,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toTopOf="@+id/button1"
+        app:layout_constraintVertical_bias="1.0"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />
 
@@ -47,6 +48,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.0"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
