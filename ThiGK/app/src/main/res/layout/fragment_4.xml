@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NGUYỄN VĂN A"
+        android:text="Lê Hoàng Đăng Gia"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#C2185B"
@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MSSV: 6313xxx"
+        android:text="MSSV: 65130700"
         android:textSize="18sp"
         android:layout_marginBottom="20dp"/>
 
