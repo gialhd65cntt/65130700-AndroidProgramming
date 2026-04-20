@@ -1,64 +1,33 @@
 package thigk2.LeHoangDangGia.thigk;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Fragment3#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Fragment3 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public Fragment3() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment3.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Fragment3 newInstance(String param1, String param2) {
-        Fragment3 fragment = new Fragment3();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    public Fragment3() {}
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_3, container, false);
+        ListView lv = v.findViewById(R.id.lvDuLich); // Đảm bảo fragment3.xml có ListView này
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_3, container, false);
+        // Hard code 5 địa điểm (Bạn cần thêm ảnh vào res/drawable)
+        ArrayList<DiaDiem> ds = new ArrayList<>();
+        ds.add(new DiaDiem(R.drawable.vinpearl, "VinWonders Nha Trang", "Đảo Hòn Tre"));
+        ds.add(new DiaDiem(R.drawable.thapba, "Tháp Bà Ponagar", "Đường 2/4, Vĩnh Phước"));
+        ds.add(new DiaDiem(R.drawable.honchong, "Hòn Chồng", "Vĩnh Phước, Nha Trang"));
+        ds.add(new DiaDiem(R.drawable.chualongson, "Chùa Long Sơn", "20 Đường 23/10"));
+        ds.add(new DiaDiem(R.drawable.vienhaiduong, "Viện Hải dương học", "01 Cầu Đá"));
+
+        DiaDiemAdapter adapter = new DiaDiemAdapter(getContext(), ds);
+        lv.setAdapter(adapter);
+
+        return v;
     }
 }
