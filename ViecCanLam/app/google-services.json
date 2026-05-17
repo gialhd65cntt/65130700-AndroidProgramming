@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "92768409332",
+    "project_id": "vieccanlam-cdb",
+    "storage_bucket": "vieccanlam-cdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92768409332:android:dd344a4311dd6e135b70a1",
+        "android_client_info": {
+          "package_name": "ntu.lehoangdanggia.vieccanlam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHpO-3f2xqdMCP9W2pdi7LYviuBis6X1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
